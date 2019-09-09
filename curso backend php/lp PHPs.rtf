@@ -1,0 +1,152 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red201\green14\blue14;\red192\green80\blue77;\red0\green77\blue187;\red255\green0\blue0;}
+{\*\generator Riched20 10.0.18362}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\cf1\ul\b\f0\fs28\lang9 CURSO DE PHP\cf2\par
+
+\pard\sl240\slmult1\cf3\fs22\lang10 APIS DE APP \f1\u8594?\f0\lang10250  DB\lang10 :\cf0\i\par
+
+\pard\li142\sl240\slmult1\ulnone\b0\i0 API's que me permiten conectar una app a una DB entre ellos tenemos a:\par
+\b PDO\b0 : \par
+\ul\b Ventajas:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\li284\sl240\slmult1\ulnone\b0 Es un API 100% orientado a objetos.\par
+{\pntext\f2\'B7\tab}Me permite cambiar de gestor de DB en cualquier momento con una simple refactorizaci\'f3n de codigo.\par
+{\pntext\f2\'B7\tab}Para proyectos medianos a grandes por la cantidad de informaci\'f3n.\par
+
+\pard\li142\sl240\slmult1\ul\b MSQLI:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\li284\sl240\slmult1\ulnone\b0 No es 100% orientado a objetos.\par
+{\pntext\f2\'B7\tab}Para proyectos peque\'f1os.\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\sl240\slmult1\cf3\ul\b\fs24 PATRONES DE DISE\'d1O\ulnone :\cf2\ul\fs28\lang9\par
+
+\pard\li142\sl240\slmult1\cf0\fs22\lang10 FRONT-CONTROLLER\ulnone :\b0  Es un patron de dise\'f1o de software, es como imaginarnos que tenemos un solo controlador que recibe todas las peticiones http de nuestra app web, cuando inicializamos la db lo hacemos en el front-controller, si \tab iniciamos sesion a traves del front-controller y de ahi el front-controller nos debe \tab ayudar a redireccionar al usuario a otra vista.\par
+\b\i\tab\ul ROUTER:\ulnone\b0\i0 Utilizaremos ruter para nuestro proyecto, utilizando una libreria llamada \tab Phroute y lo incluimos con composer: \b\i php7 composer.phar require phroute/phroute.\b0\i0\par
+\ul\par
+\b\i PATRON MVC: \ulnone\b0\i0 El patron  de dise\'f1o MVC supone divider nuestra aplicacion en tres partes Modelo, Vista, Controlador, \par
+\tab\ul\b\i Objetivo\ulnone\b0\i0 : Nos ayuda a organizar mejor la estructura de nuestras aplicaciones, es un \tab estandar el cual sera entendido por cualquier programador capacitado con tal patron, \tab nos ayuda a que nuestra app sea mas mantenida por ende robusta.\par
+\tab\ul\b\i El modelo\ulnone\b0\i0 :es la parte mas importante y es la parte que contiene toda la logica de \tab negocio de nuestra aplicaci\'f3n\b\i .------>usamos el ORM eloquent.\b0\i0\par
+\tab\ul\b\i La vista:\ulnone\b0\i0   Se encargara simplemente de desplegar datos, es lo que se muestra al \tab cliente.\b\i ---->usamos twig.\b0\i0\par
+\tab\ul\b\i El controlador:\ulnone\b0\i0  Sera la parte que une la vista y el modelo creando una comunicacion \tab entre ellos\b\i ---->usamos phrouter.\b0\i0\par
+\tab\ul\b\i Flujo normal de una Aplicacion Web:\ulnone\b0\i0\par
+\tab El usuario llegaria y estaria viendo una pagina osea una vista , cualquier accion que \tab haga el usuario se mandaria atravez de la vista hacia el controlador y el controlador a \tab su vez mandaria llamar al modelo y esperaria que le respondan, los modelos pueden \tab ser cualquier operacion que tengan que hacer, acceso a la base de datos, consultar \tab servicios de terceros, los que ustedes necesiten, el controlador espera para recibir \tab datos de respuesta y el controlador le dira a la vista lo que debe formatear y \tab mostrarle al usuario.\par
+
+\pard\sl240\slmult1\cf4\ul\b\i\fs28\par
+\par
+\cf3\i0\fs24 CAPAS DE LA APLICACION\ulnone :\cf0\ul\fs22\par
+CAPA VISTA:\ulnone\b0\par
+
+\pard\li142\sl240\slmult1\ul\b Motor De Template\ulnone :\b0  Son librerias de terceros que su funcion es formatear datos  y crear html a partir de ello.\par
+\ul\b Recomendacion\ulnone :\b0  Recomendable usar para proyectos grandes, apps robustas que se van agregagando gradualmente ajustes.\par
+\ul\b Beneficios\ulnone :\ul\i\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-208\li426\sl240\slmult1\ulnone\b0 Nos obliga a no utilizar code php dentro de nuestras vistas y asi hacemos que nuestras vistas no procesen datos.\par
+{\pntext\f2\'B7\tab}Nos agregan multiples funcionen helpers que nos permiten mejorar la sintaxis que estamos trabajando en nuestro template.\par
+{\pntext\f2\'B7\tab}Los motores de template nos ayudan con temas como herencia de templates, incluir templates externos y cosas de seguridad.\par
+
+\pard\li142\sl240\slmult1\ul\b\i0 Twig\ulnone :\b0  Con este motor lo que haremos sera cambiar la sintaxis de php en nuestras vistas por codigo twig haciendolo ver mas profesional, mas flexible y moderna \tab tambien nos permite hacer extensiones de template para reutilizar codigo.\par
+Existen 3 tipos de delimitadores con Twig:\par
+\b\i\{# #\}\b0\i0 : Este es para comentar.\par
+\b\i\{% %\}\b0\i0 : Este delimitador es para declarar\par
+\b\i\{\{ \}\}\b0\i0 : Este delimitador es para imprimir\par
+
+\pard\sl240\slmult1\ul\b CAPA MODELO:\ulnone\b0\par
+
+\pard\li142\sl240\slmult1\ul\b ORM\ulnone :\b0  Mapeo objeto relacional, es una tecnologia que nos ayuda a mapear nuestra base de datos en nuestro proyecto, representando cada tabla como objeto.\par
+\ul\b Ventajas\ulnone :\b0  La ventaja de utilizar el ORM ELoquent es que Eloquent ya viene preparado para utilizar varios motores de base de datos como: MYSQL, POSTGRESQL, SQL SERVER, SQLITE.\par
+ahora si queremos cambiar de base de datos en nuestro proyecto solo cambiamos la configuracion del Eloquent.\par
+Eloquent protege siempre a sus modelos cuando podamos cometer un error al insertar un registro, con fillable habilitamos ese modo.\par
+Eloquent por default o predeterminadamente siempre que se llene un registro agrega una columna \b\i created_at\b0\i0  y siempre que se modifique va actualizar la columna \b\i updated_at\b0\i0 .\par
+
+\pard\sa200\sl276\slmult1\par
+\ul\b\i\par
+\par
+
+\pard\li720\sl240\slmult1\par
+
+\pard\sl240\slmult1\cf3\i0\fs24 LIBRERIAS DE TERCEROS\ulnone :\cf0\ul\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-208\li208\sl240\slmult1 Composer\ulnone\b0 : Es una dependencia que nos sirve para la capa controlador.\ul\b\par
+
+\pard\li284\sl240\slmult1\ulnone busqueda:\b0  composer\b\i\par
+\i0 instalacion:\b0  \par
+
+\pard\li426\sl240\slmult1\b 1\f1\u8594?\b0\f0\lang10 Nos posicionamos en la raiz de nuestro proyecto y creamos un json llamado composer.json.\par
+\b 2\f1\u8594?\b0\f0\lang10 php7 composer.phar install\ul\b\i\fs24\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-208\li208\sl240\slmult1\i0\fs22 PHROUT\b0 :\ulnone  Es una dependencia que nos sirve para la capa controlador.\par
+
+\pard\li142\sl240\slmult1\b busqueda:\b0  phroute.\par
+\b instalacion:\b0  php7 composer.phar require phroute/phroute.\par
+\ul\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-208\li208\sl240\slmult1\b Twig:\ulnone\b0  Es una dependencia que nos sirve para la capa vista, es un motor de template de PHP, que evita el ataque XSS, el cual quiere decir inyectar codigo JS en nuestros campos de formulario.\par
+
+\pard\li142\sl240\slmult1\b busqueda:\b0  twig.\par
+\b instalacion:\b0  php7 composer.phar  require twig/twig\par
+\ul\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-208\li208\sl240\slmult1\b Eloquent:\ulnone\b0  Es una dependencia que utilizamos en la capa modelo, es un ORM(Mapeo \tab Objeto-Relacional), que nos permite mapear las tablas de nuestra DB a nuestro \tab proyecto y trabajarlo como objetos.\par
+
+\pard\li142\sl240\slmult1\b busqueda:\b0  illuminate/database.\par
+\b instalacion:\b0  php7 composer.phar  require illuminate/database.\par
+\ul\par
+
+\pard\sl240\slmult1\b vlucas/DotEnv:\ulnone\b0  Lo que hace es permitirnos crear un archivo que tenga todas las variables de entorno de un servidor y nosotros vamos a poder importarlas y \tab utilizarlas en nuestra maquina local.\par
+
+\pard\li142\sl240\slmult1 Dentro de nuestro servidor siempre vamos a definir variables de entorno y entonces\par
+nosotros vamos a refactorizar nuestro proyecto para que nuestro enterno local simule \tab que existen estas variables de entorno.\par
+El archivo .env va a tener todas nuestras variables de enterno que nosotros \tab queremos, esto simula variables de entorno de un servidor y nosotros vamos a poder \tab importarlas y utilizarlas en nuestra maquina local.\par
+
+\pard\sl240\slmult1\b\'bfcomo saben mis compa\'f1eros  que deben poner en un archivo .env?\par
+\b0 Se crea un archivo .env.example.\par
+\par
+\ul\b siriusphp/validate:\ulnone\b0  Lo utilizamos como modulo independiente para nuestro \tab proyecto, nos permite hacer validacion del lado del servidor.\par
+\ul\b SweetALert2 o SmokeJS:\ulnone\b0  Es una libreria de Javascript que nos permite estilizar \tab nuestras alert, prompt, confirm, etc ya formateados, nos sirve para la validacion del lado del cliente.\par
+\ul\b busqueda\ulnone\b0 : sweetalert2 cdn\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\sl240\slmult1\cf3\ul\b\fs24 ATAQUES INFORMATICOS E INSEGURIDAD INFORMATICA O VULNERABILIDAD INFORMATICA\ulnone :\cf0\ul\i\fs22\par
+
+\pard\li142\sl240\slmult1\i0 SQLInjection:\ulnone\b0  Es un ataque a nuestro sistema por medio de los campos de formulario inyectando script de DB.\par
+\ul\b XSS:\ulnone\b0  Es un ataque a nuestro sistema por medio de los campos de formulario \tab inyectando script JS.\par
+
+\pard\sl240\slmult1\fs24\par
+\cf3\ul\b VALIDACIONES\ulnone :\cf0\b0\par
+
+\pard\li142\sl240\slmult1\ul\b\fs22 Validacion Frontend:\ulnone\b0  Nos sirve para evitar que el cliente espere a la hora de enviar una peticion para ver lo que esta pasando, \b\i mejora la experiencia del Usuario.\par
+
+\pard\li284\sl240\slmult1\i0 Desventajas: \b0 El Javascript puede ser modificado, eliminado o desactivado del lado del \tab cliente.\b\i\par
+
+\pard\li142\sl240\slmult1\ul\i0 Validacion Backend:\ulnone\b0  Para asegurarnos de no recibir datos maliciosos o recibir informacion mala erroenea.\par
+
+\pard\li284\sl240\slmult1\b Desventajas: \b0 Requiere que se haga un  envio al servidor y luego  otro envio para que \tab regrese en forma de respuesta.\ul\b\i\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0\i0\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+
+\pard\sl240\slmult1\cf3\par
+\ul\b RECOMENDACIONES:\par
+\cf0\ulnone Framework Laravel\b0 : Es un paso natural  despues de que uno sepa PHP.\ul\b\par
+\ulnone Aprender el Sistema control de versiones Git\b0 : Para llevar un control de nuestro codigo fuente, en caso se comienze a trabajar en un equipo de desarrollo.\par
+\ul\b Metodologias Agile, Scrum, TDD:\ulnone\b0  Las metodologias Agiles, esto nos permite trabajar armoniosamente y agilmente dentro de un equipo de trabajo en este caso un equipo de desarrollo, lo cual es una serie de herramientas y metodologias que nos va permitir trabajar mas eficientemente en un equipo, un tema muy importante hablando de metodologias agiles es el desarrollo orientado a pruebas en el cual nostros tendremos que desarrollar pruebas para cada parte de nuestro codigo eso nos ayudaria obviamente a tener mejor calidad en nuestros resultados finales. \ul\b\par
+EL FIN:\ulnone\b0\par
+Mandar nuestra aplicacion a produccion o Liberar nuestra aplicaci\'f3n al publico con Git o Heroku.\par
+\par
+
+\pard\sl240\slmult1\qc\lang9\par
+}
+ 

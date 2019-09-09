@@ -1,0 +1,141 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang10250{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red192\green80\blue77;\red0\green77\blue187;}
+{\*\generator Riched20 10.0.15063}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\cf1\ul\b\i\f0\fs28\lang10 CURSO DE AS\cf0\fs22\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\sl240\slmult1\cf2\i0\fs24 GLOSARIO:\cf0\i\fs22\par
+
+\pard\li142\sl240\slmult1 Arquitectura:\ulnone\b0\i0  Es el arte o tecnica de dise\'f1ar, desarrollar y contruir en este caso software.\ul\b\i\par
+Requerimientos\ulnone\b0\i0 : Se refiere a solicitar, requerir, pedir o una necesidad que el usuario requiere para solucionar un problema o alcanzar un objetivo.\par
+
+\pard\sl240\slmult1\cf2\ul\b\fs24\'bfQUE ES ARQUITECTURA DE SOFTWARE?:\cf0\i\fs22\par
+
+\pard\li142\sl240\slmult1\ulnone\b0\i0 Es la estructura del sistema compuesto por elementos de software, sus propiedades visibles y sus relaciones.\par
+\b\i Ejemplo\b0\i0 : Los diagramas arquitectonicos de Twitter, AWS y Flux.\ul\b\i\par
+\ulnone\b0\i0 Hablamos de estructura modelos con diagramas, la comunicacion entre diferentes sistemas e inluso entre diferentes modulos de sistemas.\par
+En este curso vamos a entender el proceso de desarrollo de software\par
+Entender el rol del arquitecto.\par
+La arquitectura esta involucrada en cada etapa del PDDS.\par
+Como el arquitecto ayuda al exito o fracaso del sistema.\par
+
+\pard\sl240\slmult1\cf2\ul\b\fs24 1) EL PROCESO DE DESARROLLO DE SOFTWARE:\ulnone\b0\par
+
+\pard\li142\sl240\slmult1\cf0\i\fs22 Es una serie de actividades que me direcciona a la creacion de un producto de software.\ul\b\par
+\ulnone\b0\i0 Etapas del PDDS:\par
+\ul\b\i Analisis de Requerimientos\ulnone\b0\i0 : Es cuando se tiene una idea para crear un software, conocer bien el problema que se quiere resolver para solucionarlo.\par
+\ul\b\i Dise\'f1o de la Solucion\ulnone\b0\i0 : Es la etapa donde se analiza mas profundamente el problema, se empiezan a proponer soluciones, esta etapa es muy relevante ya que se pueden encontrar otros problemas.\par
+\ul\b\i Desarrollo y Evaluacion\ulnone\b0\i0 : Es la etapa donde estamos creando el software y lo testeamos constantemente.\par
+\ul\b\i Despliegue\ulnone\b0\i0 : Es la etapa cuando ya el software esta creado y solo necesitamos de ponerlo a  producci\'f3n, ya se le puede presentar a un usuario, para ello necesitamos infraestructuras y roles de operacion como dominio y hosting, un servidor.\par
+\ul\b\i Mantenimiento y Evoluci\'f3n\ulnone\b0\i0 : Es la etapa donde necesitamos actualizar nuestro software constantemente para mejorar el sistema,  hasta que deje de ser nesesario.\par
+
+\pard\sl240\slmult1\par
+Problemas escenciales y accidentales\par
+\cf2\ul\b\i ROLES:\cf0\ulnone\b0\i0\par
+
+\pard\li142\sl240\slmult1 El rol(funciones) del puesto de trabajo, un programador puede estar cumpliendo el rol de arquitecto y rol de analista, esto se da mas que todo en empresas peque\'f1as.\par
+\b\i Rol del Experto del dominio\b0\i0 --->partes interesadas(stakeholders)\par
+\b\i Rol de Analista(Funcional, Negocio): \b0\i0 En una metodologia tradicional, es la persona que indaga en que es lo que vamos a resolver y definir los requerimientos. En metodologias agiles el due\'f1o del producto es el cliente, son los que definen los requerimientos.\par
+\b\i Rol de Administrador de Sistemas: \b0\i0 En metodologias tradicionales luego de hacer el despliegue de la aplicacion, se encargaban de todo lo que era la operacion del sistema, Si habia serviores se encargaban de mantener el servidor, actualizar las librerias del OS, encontrar errores en los logs. En las metodologias agiles estan los DEVOPS que es operaciones y desarrollo unidos.\par
+Muchas veces una empresa que implementa metodologias agiles, no tiene puesto para QA-Tester, Desarroladores y Arquitectos sino espera que todo surga del equipo.\par
+\b\i Gestor del Proyecto-->Facilitador\b0\i0 : En metodologias Tradicionales es la persona que se encarga de las entregas, cumplir con el plan, toda la gestion del ciclo de vida del proyecto, hay todavia muchas empresas que ofertan esos puestos. En metodologias agiles son los facilitadores(Scrum Masters), se encargan de los entregables, el Planing que se va hacer en el siguiente sprint, estar atento a las fechas para los entregables.\par
+
+\pard\sl240\slmult1\cf2\ul\b\fs24 2)INTRODUCCION A LA ARQUITECTURA DE SOFTWARE:\ulnone\b0\fs22\par
+
+\pard\li142\sl240\slmult1\cf0 La ley de Conway dice que  la comunicacion es importante en una organizacion el saber organizarse.\par
+\ul\b\i El Objetivo De Un Arquitecto:\par
+\ulnone\b0\i0 El arquitecto va a tener diferentes partes interesadas o\ul\b\i  \ulnone\b0\i0 Los Stackholders, el arquitecto va a conectar estos stackholders con sus requerimientos con la implementacion del sistema.\ul\b\i\par
+\ulnone\b0\i0 Estos roles van a tener diferentes requerimientos y van afectar de diferente forma al sistema.\par
+\b\i Stackholders---Requerimientos\b0\i0\par
+\b\i El Cliente\b0\i0 : \i Quiero mi sistema entregado a tiempo y dentro del presupuesto.\i0\par
+\b\i El Manager\b0\i0 : Comparte el requerimiento del cliente y tambien quiere desarrollar el software de forma independiente, poder armar equipos que puedan autogestionarse y ataquen diferentes partes del sistema.\par
+\b\i El Dev\b0\i0 : Quiero que sea facil de implementar y facil de mantener.\par
+\b\i El Usuario\b0\i0 : Quiero que el sistema sea confiable, cuando quiera usarlo que este ah\'ed.\par
+\b\i El QA\b0\i0 : Quiero que sea facil de probar, un sistema que cumpla ciertos atributos de calidad, que sea modularizado.\par
+La union de estos requerimientos tanto funcionales como no funcionales van a llevar al arquitecto a tomar desiciones de dise\'f1o que impacte sobre el sistema desarrollado.\par
+\ul\b\i Arquitectura Y Metodologias:\par
+M.Tradicional:\par
+\ulnone\b0\i0 En la etapa de Dise\'f1o de la soluci\'f3n todavia no se crea software, sino que le da a la etapa de desarrollo las herramientas necesarias para implementar el software.\par
+Como hago para ser arquitecto y ser agil, lo mas importante para ser agiles en general es el feedback.\par
+
+\pard\sl240\slmult1\cf2\ul\b\i\fs24 3)ANALISIS DE REQUERIMIENTOS:\fs22\par
+
+\pard\li142\sl240\slmult1\cf0 Entender el problema:\par
+\ulnone\b0\i0 Se va a solucionar el problema con software, separar el espacio d el problema(Idea) con el espacio de la soluci\'f3n(Dise\'f1o, Desarrollo Evalauaci\'f3n, Despliegue).\par
+\ul\b\i Requerimientos:\ulnone\b0\i0  Es una condici\'f3n o necesidad de un usuario para resolver un problema o alcanzar un objetivo.\ul\b\i\par
+\ulnone\b0 Requerimientos del producto\i0 (Negocio, Usuario, Funcional) y \i Requerimientos de Proyecto\i0 (Requerimientos conocidos, fechas de entrega, planes).\par
+\ul\b\i Requerimiento Funcional:\par
+\ulnone\b0\i0 Son aquellos requerimientos que describen que es lo que hace el sistema\par
+\ul\b\i Requerimiento No Funcional:\par
+
+\pard\sl240\slmult1\par
+
+\pard\li142\sl240\slmult1 RIESGOS:\ulnone\b0\i0  \par
+Describir riesgos, es importante saber que riesgos hay.\par
+Riesgos de Ingenier\'eda(Analisis, Dise\'f1o e implementaci\'f3n) y riesgos de gesti\'f3n de proyectos(Entregas, equipo de trabajo, planificaci\'f3n).\par
+\ul\b\'bfComo identificar riesgos?\i\par
+\ulnone\b0\i0 Hay un framework que se base en la toma de requerimientos, atributos de calidad y conocimiento del dominio.\par
+Es bueno priorizar riesgos.\par
+
+\pard\li720\sl240\slmult1\par
+
+\pard\li142\sl240\slmult1\ul\b RESTRICCIONES:\i\par
+\ulnone\b0\i0 Las restricciones son limitaciones en lo que es el dise\'f1o, desarrollo e implementaci\'f3n, quiza no tengamos a la mano todas las tecnologias, las metodologias, las plataformas, los patrones de arquitectura de software.\par
+
+\pard\li720\sl240\slmult1\par
+
+\pard\sl240\slmult1\cf2\ul\b\i\fs24 4) ESTILOS DE ARQUITECTURA:\fs22\par
+
+\pard\li142\sl240\slmult1\cf0\ulnone\b0\i0 Cuando hablamos de estilo de arquitectura hablamos de algo generico, \par
+Un estilo de arquitectura \b\i es una colecci\'f3n de desiciones arquitectonicas \b0\i0 (\i de dise\'f1o\i0 ), que aplicado a un contexto determinado \b\i me restringe las desiciones arquitectonicas \b0\i0 especificas en ese contexto y \b\i se obtienen beneficios \b0\i0 en cada sistema resultante.\cf2\ul\b\i\par
+\cf0\ulnone\b0\i0 Dependiendo de la tecnologia tambien utilizamos el tipo de estilo de arquitectura.\par
+\ul\b\i Estilos Arquitectonicos de llamado y retorno:\ulnone\b0\i0\par
+\i Programa principal y subrutinas, orientado a objetos, multinivel y cliente servidor.\ul\b\par
+Estilo Arquitectonico de Flujo de datos:\par
+Estilos Arquitectonicos Centrado en datos:\par
+\ulnone\b0 Pizarron, Centrado en base de datos, Sistema experto - basado en reglas.\par
+\ul\b\i0 Estilo Arquitectonico componentes independientes:\par
+\par
+Comparando estilos arquitectonicos \'bfComo eligo?:\ulnone\b0  Vamos a separas a los E.A en dos familias.\ul\b\par
+\i Estilos monoliticos:\ulnone\b0\i0  Es decir son los \i E.A\i0  donde vamos a desplegar un solo artefacto de software.\par
+\ul\b\i Estilos distribuidos:\ulnone\b0\i0  Son \i E.A\i0  donde cada despliegue es independiente.\par
+\ul\b\par
+
+\pard\sl240\slmult1\cf2\fs24 ADS:\cf0\fs22\par
+\ulnone\b0 Es el proceso de gesti\'f3n de la creaci\'f3n de un software.\par
+\cf2\ul\b\i\fs24 CARACTERISTICAS DEL SOFTWARE:\cf0\fs22\par
+
+\pard\li142\sl240\slmult1\ulnone\i0 Software confiable:\b0  Es el software que hace todo lo que el cliente desee, cuando asi lo requiera.\par
+
+\pard\sl240\slmult1\par
+\cf2\ul\b\fs24 DOCUMENTACION:\cf0\ulnone\b0\fs22\par
+
+\pard\li142\sl240\slmult1\ul\b\i DIAGRAMA DE CASO DE USO:\par
+
+\pard\li284\sl240\slmult1\ulnone\b0\i0 Muestra las caracteristicas del software que satisfacen las necesidades del usuario.\par
+esta compuesta por actores, casos de uso, asociaci\'f3n.\ul\b\i\par
+Actor:\ulnone\b0\i0  Representa el rol de la  persona o cosa que interactuan con el sistema.\par
+\ul\b\i Caso de Uso:\ulnone\b0\i0  Es un diagrama que me ayuda a describir lo que debe hacer un sistema, captura algunas acciones y comportamientos del sistema y los actores(\i stakeholders\i0 ) que interactuan en el.\par
+\ul\b\i Asociaci\'f3n:\ulnone\b0\i0  Es la interaccion entre el actor y el caso de uso, \i se representa por una linea que une al actor y el caso de uso\i0 .\par
+\ul\b\i Tipos de Asociaci\'f3n:\ulnone\b0\i0  inclusi\'f3n, extensi\'f3n y generalizaci\'f3n.\par
+\ul\b\i Sistema:\ulnone\b0\i0  Es el software que vamos a crear. \i Se representa como una caja rectangular\i0 , ah\'ed colocamos los casos de uso.\par
+
+\pard\li142\sl240\slmult1\ul\b DIAGRAMA DE ACTIVIDADES:\i\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0\i0\fs20\par
+
+\pard\li142\sl240\slmult1\ul\b\fs22\par
+
+\pard\sl240\slmult1\ulnone\b0\i\par
+\i0\par
+\par
+
+\pard\li720\sl240\slmult1\ul\b\i\par
+
+\pard\sl240\slmult1\ulnone\b0\i0\par
+\par
+\par
+\par
+}
+ 

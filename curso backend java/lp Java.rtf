@@ -1,0 +1,523 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang10250{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fswiss\fprq2\fcharset0 Calibri;}{\f2\fnil\fcharset0 Courier New;}{\f3\fnil\fcharset0 Courier;}{\f4\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red192\green80\blue77;\red0\green77\blue187;\red0\green176\blue80;\red102\green102\blue102;\red255\green0\blue0;}
+{\*\generator Riched20 10.0.15063}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\cf1\ul\b\f0\fs28\lang10 JAVA\cf0\ulnone\b0\fs22\par
+
+\pard\sl240\slmult1\par
+\par
+\cf1\ul\b\i\fs24 CURSO HIBERNATE Y JAVA SPRING:\par
+\par
+\cf2 TIPO DE APLICACIONES EN JAVA:\par
+
+\pard\li142\sl240\slmult1\cf0\ulnone\b0\i0\fs22 Las aplicaciones \b\i Orientadas A Presentaci\'f3n \b0\i0 tienen vistas como Html, JSP, son proyectos web dinamicos.\par
+En cambio Las aplicaciones \b\i Orientadas A Servicios \b0\i0 son aplicaciones m\'e1s enfocadas al backend y su Vista es un JSON.\par
+As\'ed como HTML me ayuda a esquematizar la informaci\'f3n existen otros como JSON.\par
+
+\pard\sl240\slmult1\par
+\cf2\ul\b\i\fs24 AMBIENTE DE TRABAJO:\cf0\ulnone\b0\i0\fs22\par
+
+\pard\li142\sl240\slmult1\b JDK 11\b0 : El kit de herramientas de Java, se comprueba en cmd.\par
+\b Maven\b0 : Es la herramienta de gesti\'f3n de proyectos para empaquetar nuestros proyectos, se comprueba en cmd.\par
+\b Apache Tomcat 9\b0 : El contenedor de Servlets, funciona como un servidor Web, se levanta en cmd. \par
+\b Docker\b0 : Para poder hacer imagenes y contenedores de la aplicaci\'f3n.\par
+\b Spring Tool Suite\b0 : IDE para Spring Framework.\par
+
+\pard\sl240\slmult1\par
+\par
+\cf2\ul\b\i\fs24 APLICACION EMPRESARIAL:\cf0\ulnone\b0\i0\fs22\par
+
+\pard\li142\sl240\slmult1 Esta formada por 3 componentes principales\lang10250 :\lang10\par
+\b La Empresa\b0\par
+\b Requerimientos Funcionales \b0 ---> Necesidades.\par
+\b Aplicaci\'f3n Empresarial \b0 ---\lang1033 >\lang10250  Que es un conjunto de componentes articulados.\lang10\par
+Son aplicaciones que pueden estar desarrollas en diferentes LP's osea integrales.\par
+Estan orientados a solucionar problemas empresariales.\par
+\par
+Al usuario final se le presenta como una aplicaci\'f3n unica e integral en la cual satisface las necesidades.\par
+Este tipo de apliaciones tienen varios tipos de clientes o Fronts, puede ser un front que se presente en una aplicaci\'f3n mobile, otro que se presente en el tema de la Web u otro que se presente como Cliente-Servidor.\par
+
+\pard\sl240\slmult1\par
+\cf2\ul\b\i\fs24 SERVIDOR WEB  Y SERVIDOR DE APLICACIONES\cf0 :\fs22\par
+
+\pard\li178\sl240\slmult1\ulnone\i0 El servidor Web \b0 tiene el contendor Web.(Tomcat, Jetty)\par
+\b El servidor de Aplicaciones \b0 tiene el contenedor Web y el contenedor de Negocio(EJB).\par
+
+\pard\sl240\slmult1\par
+\cf2\ul\b\i\fs24 PATRON DE DISE\'d1O:\fs22\par
+
+\pard\li178\sl240\slmult1\ulnone\b0\i0  \cf0 Nos ayuda al facil mantenimiento y facil desarrollo de las aplicaciones como MVC.\par
+
+\pard\sl240\slmult1\par
+\cf2\ul\b\i\fs24 APIS DB :\cf0\ulnone\b0\i0\fs22\par
+
+\pard\widctlpar\li142\sl240\slmult1\ul\b\f1\lang3082 JDBC (Java Data Base Conectivity):\ulnone\b0  \par
+
+\pard\widctlpar\li355\sl240\slmult1\i Es un \b API \b0 que me sirve para conectar una aplicaci\'f3n en java con una base de datos.\par
+Los Drivers se presentan en formato .JAR\par
+\i0 Es un Intermediario entre la aplicaci\'f3n Java y la DB.\par
+Es un ORM.\par
+\ul\b\i Me facilita 3 cosas:\ulnone\b0\i0\par
+ Abrir conexion con la DB.\par
+ Ejecutar consultas contra la DB. \par
+ Procesar los resultados que me envia la DB.\i\par
+
+\pard\widctlpar\li142\sl240\slmult1\ul\b\i0 ODBC (Open Data Base Conectivity):\ulnone  \b0 Es un \b\i API\b0\i0  (Conectividad Abierta a la Base de Datos), es una API que me sirve para acceder a los datos de una DB relacional o no relacional utilizando para ello SQL. \par
+Todas las bases de datos tienen un ODBC.\par
+\par
+Qu\'e9 pasa si escribo una aplicaci\'f3n y quiero utilizar las tablas de Mysql, ahora que pasa si ya no quiero utilizar las tablas de Mysql sino de Oracle, ah\'ed viene el problema.\par
+\par
+
+\pard\sl240\slmult1\cf2\ul\b\i\f0\lang10  \fs24 JSPs:\fs22\par
+
+\pard\li178\sl240\slmult1\cf0\ulnone\b0\i0 Son componentes del lado delservidor, para desarrollar paginas web, combina codigo Java con codigo HTML.\par
+Los JSPs al igual que los Servlets tienen acceso a los objetos:\par
+
+\pard\sl240\slmult1\par
+
+\pard\li142\sl240\slmult1\b\i request:\b0\i0  Representa al objeto de petici\'f3n o solicitud dentro de un JSP/Servlet, el que contiene los parametros '\i name\i0 ' del formulario.\b\i\par
+response:\b0\i0  Representa el objeto de respuesta dentro de un JSP/Servlet.\b\i\par
+session:\b0\i0  Representa el objeto de sesion del Usuario en un JSP/Servlet.\b\i\par
+pageContext:\b0\i0  Representa el objeto de Contexto.\b\i\par
+application:\b0\i0  Representa el objeto de Aplicaci\'f3n.\b\i\par
+out:\b0\i0  Representa el objeto de escritura, para enviar a pantalla.\b\i\par
+config:\b0\i0  Representa el objeto de configuraci\'f3n para un JSP/Servlet.\b\i\par
+page:\par
+exception:\b0\i0  Representa el objeto de errores para un JSP/Servlet.\b\i\par
+
+\pard\sl240\slmult1\cf2\ul\par
+\fs24 SERVLETS:\fs22\par
+
+\pard\li178\sl240\slmult1\ulnone\b0\i0  \cf0 Es un componente del lado del servidor(Clase Java), esta dotado de 2 elementos fundamentales (request y response) que se gestionan aqu\'ed y devuelve informaci\'f3n a la vista, \b\i es como una especie de Controlador de Vista\b0\i0 , \b\i reciben peticiones\b0\i0 ,\b\i  la procesan y las devuelven o redireccionan a la vista\b0\i0 .\par
+Es un Controlador y maneja las rutas a traves de su anotaci\'f3n @WebServlet("/Path"), Hereda de la clase HttpServlet y por eso se puede utilizar los m\'e9todos doGet y doPost.\par
+\ul\b\i METODOS:\ulnone\b0\i0\par
+\b\i PrintWriter escritor = response.getWriter():\i0  \b0 Escribe en el navegador.\par
+\b\i request.getRequestDispatcher("page.jsp").forward(request, response):\par
+\b0\i0  Redirigimos y enviamos atributos.\i\par
+\b request.sendredirect("page.jsp"): \b0\i0 Solo Redirigimos.\par
+\b\i request.setAttribute("atr", Object)\b0 : \i0 Crea un Attribute.\par
+\b\i request.getSession().setAttribute("atr", Object):\b0  \i0 Crea un atributo de Sessi\'f3n.\par
+
+\pard\li142\sl240\slmult1\ul\b\i SESSIONES:\par
+\ulnone\b0\i0 Son mecanismos de programaci\'f3n de tecnologias Web que guardan informaci\'f3n del usuario al pasar de una pagina a otra, los datos asociados a la Session se guardan en el servidor, a diferencia de una Cockie que se guarda en el cliente.\ul\b\i\par
+
+\pard\sl240\slmult1\cf2\fs24 POJO VS JAVA BEAN:\fs22\par
+
+\pard\li142\sl240\slmult1\cf0\ulnone Java bean implementa \b0\i0 de la clase Serializable(Interfaz), atributos privados y al menos un constructor sin argumentos.\par
+\b\i El POJO \b0\i0 es una instancia de una clase \b\i no extiende ni implementa \b0\i0 nada en especial enfatiza el uso de clases simples.\par
+
+\pard\sl240\slmult1\cf2\ul\b\i\fs24 MAVEN:\cf0\fs22\par
+\ulnone\b0\i0 Es un assitente inteligente o manejador de paquetes muy similar a \i NPM\i0  para node.js, Composer para PHP,etc.\par
+Nos permiten instalar las dependencias(librerias), en este caso los jar, decidir con que versi\'f3n de Java se va compilar nuestros archivos y tambien nos ayuda a empaquetar ya sea con jar o war.\par
+
+\pard\sa200\sl276\slmult1\cf2\ul\b\i\par
+
+\pard\sl240\slmult1\fs24 ARQUITECTURA DE LA APLICACI\'d3N:\b0\i0\fs22\par
+\cf0\ulnone Requerimientos\i  \i0 ---\lang1033 > Dise\lang10250\'f1o de la Aplicacion ---\lang1033 > Aplicaci\lang10250\'f3n Terminada.\par
+
+\pard\li142\sl240\slmult1\ul\b\i Requerimientos:\par
+
+\pard\li284\sl240\slmult1\ulnone\b0\i0 Cuantos componentes va tener.\par
+Con que Lp y Base de datos trabajar.\par
+Se va manejar interoperabilidad\par
+Que tema de seguridad manejar\par
+
+\pard\li142\sl240\slmult1\ul\b\i Dise\'f1o de la Aplicaci\'f3n:\ulnone\b0\i0\par
+
+\pard\li284\sl240\slmult1 Plasmar los requerimientos.\par
+Permiten visibilizar en como va quedar el software.\par
+
+\pard\li142\sl240\slmult1\ul\b\i Aplicaci\'f3n Terminada:\par
+
+\pard\li284\sl240\slmult1\ulnone\b0\i0 Implementamos todo en base al dise\'f1o.\par
+Requrimientos funcionales:\par
+Que va pasar si tiene m\'e1s usuarios.\par
+Cuando la apliaci\'f3n crece.\par
+Tema de seguridad\par
+Tema de reusabilidad\par
+Requerimientos no funcionales:\par
+
+\pard\li142\sl240\slmult1\cf2\ul\b\i\fs24\lang10\par
+
+\pard\sl240\slmult1\'bfDIFERENCIAS ENTRE SPRINGFRAMEWORK Y SPRING BOOT?\cf0\ulnone\i0\fs22\par
+
+\pard\li142\sl240\slmult1 SPRING FRAMEWORK:\b0  Es un Framework de Java, nace para optimizar c\'f3digo Java, especialmente para solucionar la conplejidad de las tecnologias de Java como EJB.\par
+\ul\b\i Caracteristicas:\ulnone\b0\i0\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\li142\sl240\slmult1 Desarrollo Basado en POJOS o clases planas.\par
+{\pntext\f4\'B7\tab}Arquitectura en Capas.\par
+{\pntext\f4\'B7\tab}Programaci\'f3n Declarativa(Anotaciones).\par
+{\pntext\f4\'B7\tab}Reducci\'f3n de codigo repetitivo.\par
+{\pntext\f4\'B7\tab}Framework Open Source.\par
+{\pntext\f4\'B7\tab}No solo se limita al lado del servidor.\par
+{\pntext\f4\'B7\tab}El developer tiene que realizar todas las configuraciones.\b\par
+
+\pard\sl240\slmult1\par
+
+\pard\li142\sl240\slmult1 SPRING BOOT: \b0 Se basa en SpringFramework, Es un conjunto de tecnologias preconfiguradas para crear Apss JavaEE independientes basadas en Spring de grado de Producci\'f3n.\par
+\ul\b\i Caracteristicas:\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-208\li426\sl240\slmult1\ulnone Aplicaci\'f3n Standalone: \b0\i0 Una aplicaci\'f3n en Spring Boot es empaquetada en un \b JAR\b0  con todas sus dependencias para poder ejecutarse sin necesidad de instalar un Servidor Web, permitinedo funcionar como una aplicacion Standlone.\par
+{\pntext\f4\'B7\tab}\b\i Servidores Embebidos:\b0\i0  Spring Boot soporta a Tomcat y Jetty como servidores embebidos.\par
+{\pntext\f4\'B7\tab}\b\i Configuraci\'f3n Simple:\b0\i0  Spring Boot soporta cada una de las siguientes caracteristicas de los modulos de Sping como Spring MVC, Spring Data, Spring Rest, Spring Security y lo hace de una manera simple, a trav\'e9s de dependencias simples una sola por tecnologia, se puede configurar online con la herramienta \b\i Spring Initializr.\b0\i0\par
+{\pntext\f4\'B7\tab}\b\i Caracteristica de produccion listas: \b0\i0 Spring Boot viene con caracteristicas de configuraci\'f3n predefinidas para ambientes de produccion.\par
+{\pntext\f4\'B7\tab}Optimiza mucho m\'e1s el desarrollo y despliegue, aumenta la productividad.\cf2\par
+
+\pard\sl240\slmult1\ul\b\i\fs24\par
+PERSISTENCIA:\ulnone\b0\i0\fs22\par
+\cf0 Es el proceso de almacenar informaci\'f3n y poder recuperarla en cualquier momento.\par
+Existen varios mecanismos de persistencia, entre estos estan, archivos planos, archivos binarios, DB Relacional, DB Documental,etc.\par
+En Java para poder persistir info se tiene las siguientes tecnologias:\par
+
+\pard\li142\sl240\slmult1\cf2\ul\b JDBC:\cf0\ulnone\b0\par
+
+\pard\li284\sl240\slmult1 Conjunto de clases que me permiten gestionar la informacion de la DB usando operaciones DDL y DML.\par
+\b\i Capa de Persistencia\b0\i0 : Tambien conocida como ORM, ejemplos de estas Hibernate, EclipseLink, ToplLink, Datanucleos, entre otras. Los cuales permiten persistir informacion y gestionar la data pero como objetos, gracias a que una de sus principales caracteristicas es mapear un modelo relacional a un modelo objetual, osea convertir de tablas a clases.\par
+
+\pard\li142\sl240\slmult1\cf2\ul\b JPA:\cf0\ulnone\b0\par
+
+\pard\li284\sl240\slmult1 Es un Gestor de Persistencia que utiliza una capa de persistencia, no importa la capa de persistencia(Hibernate, EclipseLink) y utiliza un proveedor de persistencia.\par
+\b\i Spring Data\b0\i0 :\b  \b0 Permite manipular dbs relacionales y no relacionales\b .\b0\par
+\b\i Spring Data JPA\b0\i0 : Es una capa m\'e1s alta de abstracci\'f3n.\par
+\par
+
+\pard\li142\sl240\slmult1\cf2\ul\b HIBERNATE:\cf0\par
+
+\pard\li284\sl240\slmult1\ulnone\b0 Es un ORM que permite mapear mi DB Relacional a Java y manipular la DB desde Java en forma de Objetos , crear registros desde Java, Actualizar desde Java, etc.\par
+Las tablas y los campos se mapean con Anotaciones: \b @\b0\par
+\b Ventajas:\par
+\b0 Podemos migrar de MySQL a PostgreSQL con Hibernate, no cambiaran los Querys si los creamos en Hybernate.\b\par
+\par
+
+\pard\sl240\slmult1\cf2\ul\fs24 CONTROLLERS:\par
+
+\pard\li142\sl240\slmult1\cf0\fs22 ANOTACIONES:\ulnone\b0\par
+\b\f2 @Controller:\b0\f0 Con esta anotaci\'f3n Spring reconoce la clase marcada como una clase controladora.\par
+\b\f2 @RestController\f0 :\b0  Anotaci\'f3n que sustituye el uso de @Controller + @ResponseBody.\par
+\b\f2 @ResponseBody\f0 :\b0  Anotaci\'f3n que indica el cuerpo de respuesta del servicio.\par
+\b\f2 @Autowired:\b0\f0 Con esta anotaci\'f3n Spring va inyectar las dependencias sobre el atributo marcado, en este caso estamos inyectando la capa repository, y por eso no necesitamos instanciarla.\par
+\b @PathVariable:\b0\par
+\b\f2 @RequestMapping\f0 :\b0  Con esta anotaci\'f3n especificamos la \b ruta \b0 desde el cual se va escuchar el servicio y el \b m\'e9todo \b0 que le corresponde.\par
+\b\f2 @PostMapping\f0 :\b0  Con esta anotaci\'f3n simplificamos indicar el m\'e9todo GET en \f2 @RequestMapping\f0 .\par
+\b\f2 @GetMapping:\b0  \f0 Con esta anotaci\'f3n simplificamos indicar el m\'e9todo POST en \f2 @RequestMapping\f0 .\par
+\b @Valid:\par
+@RequestBody:\par
+\b0\par
+\par
+\ul\b UTILIZAR:\par
+\ulnone\f2 Model\f0 :\b0  Es una interfaz, que agrega soporte para los atributos.\par
+\b\f2 ModelAndView:\b0\f0 Es una clase y me permite devolver tanto modelo como la vista.\par
+\par
+\par
+
+\pard\sl240\slmult1\cf2\ul\b\fs24 THYMELEAF:\cf0\ulnone\b0\fs22\par
+
+\pard\li142\sl240\slmult1\par
+\par
+
+\pard\sl240\slmult1\par
+
+\pard\li142\sa200\sl276\slmult1\cf2\par
+
+\pard\sl240\slmult1\ul\b\i\fs24 CAPAS DE LA APLICACION\par
+
+\pard\li142\sl240\slmult1\cf0\ulnone\b0\i0\fs22 Creamos una \b tarea de Ejecucion \b0 en nuestro IDE: clean install spring-boot:run\par
+Establecemos varias metas: clean(Limpiar), install( empaquetar) y spring-boot:run(correr el spring-boot).\cf2\par
+\ul\b\i CAPA DE MODELO:\ulnone\b0\i0\par
+
+\pard\li284\sl240\slmult1\cf3\ul\b TECNOLOGIAS\cf0\ulnone\b0 : \b Spring Data JPA\b0 (Gestor de Persistencia), \b Hibernate\b0 (ORM), \b Lombok\b0 (Optimiza Pojos).\par
+\par
+\cf3\ul\b implementacion:\cf2\i\par
+\cf0\ulnone\b0\i0\par
+\cf4\ul\b\i Anotaciones Para Clase:\cf0\par
+
+\pard\li426\sl240\slmult1\ulnone\i0\f2 @Data \b0 ---\lang1033 > Lombok\lang10\par
+\b @Entity\b0\par
+\b @Table\b0 (\b name\b0 ="cliente")\par
+\b @NamedQuery\b0 (\b name\b0 ="Cliente.findByIdentificacion"\b ,\b0  \b query\b0 ="SELECT c FROM Cliente c WHERE c.identificationCli = ?1 ")\par
+
+\pard\li142\sl240\slmult1\f0    \cf4\ul\b\i Anotaciones Para Atributos:\cf0\par
+
+\pard\li426\sl240\slmult1\ulnone\i0\f2 @Id\b0\par
+\b @GeneratedValue\b0 (\b generator\b0 ="system-uuid")\par
+\b @GenericGenerator\b0 (\b name\b0 ="system-uuid", \b strategy\b0 ="uuid2")\par
+\b @OneToMany\b0 (mappedBy="cliente")\par
+\b\lang10250 @ManyToOne\b0\par
+\b @JoinColumn\b0 (name="idClie")\ul\b\i\f0\lang10\par
+
+\pard\li142\sl240\slmult1\cf2 CAPA NEGOCIO:\i0\par
+
+\pard\li284\sl240\slmult1\cf0\ulnone\b0 Los Repositorios son una capa m\'e1s arriba de abstraccion sobre las operaciones CRUD.\par
+\cf3\ul\b TECNOLOGIAS\cf0\b0 : \ulnone\b Spring Data JPA\b0 (A\'f1adiento el JPA Repository).\cf2\ul\b\i\par
+\cf3\i0 implementacion\ulnone : \par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-208\li568\sl240\slmult1\cf0\b0 Agregar la libreria en el pom.xml.\par
+
+\pard\li284\sl240\slmult1\cf4\ul\b\i Anotaciones Para Clase:\cf0\par
+
+\pard\li426\sl240\slmult1\ulnone\i0\f2 @Service\par
+@Transactional\b0 (\b readOnly\b0 =true)\ul\b\i\f0\par
+
+\pard\li142\sl240\slmult1\ulnone\b0\i0    \cf4\ul\b\i Anotaciones Para M\'e9todos:\cf0\f2\par
+
+\pard\li284\sl240\slmult1\ulnone\b0\i0  \b @Transactional\b0\par
+
+\pard\li142\sl240\slmult1\cf2\ul\b\i\f0 CAPA DE VISTA:\par
+
+\pard\li284\sl240\slmult1\cf3\i0 TECNOLOGIAS\cf0\b0 : \ulnone\b Spring Rest\b0  y \b Thymeleaf\par
+\cf3\ul implementacion\ulnone : \par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-208\li568\sl240\slmult1\cf0\b0 Agregar las libreria en el pom.xml.\par
+
+\pard\li142\sl240\slmult1\cf2\ul\b\i\par
+\i0\par
+
+\pard\li284\sl240\slmult1\cf0\ulnone\b0 La cual va interactuar con la capa de Negocio y la que se va mostrar al usuario.\ul\b\par
+
+\pard\li258\sa200\sl276\slmult1 Spring Rest:\ulnone\b0  Es un modulo de Spring MVC, en el cual tiene un conjunto de clases para poder crear servicios web, para configurar un servicio web se utiliza la anotaci\'f3n @RestController en la clase base , la cual combina comportamientos de las anotaciones @Controller y @ResponseBody.\par
+
+\pard\li142\sa200\sl276\slmult1 En un servicio Web tenemos algunos m\'e9todos que se relacionan con las operaci\'f3nes si es \b Para Creaci\'f3n :\b0\par
+\b\i\f3\par
+\i0\f0 Para Actualizar: \b0\par
+
+\pard\li258\sl240\slmult1\b\f2 @PutMapping(\b0 "\{id\}"\b )\par
+@PathVariable\par
+
+\pard\li142\sa200\sl276\slmult1\f0 Para Una Autorizacion:\b0  \par
+\b Para Eliminar:\b0\par
+\par
+
+\pard\li142\sl240\slmult1\ul\b\i Anotaciones:\ulnone\b0\i0\par
+\b\f2 @RestController\b0\f0 : Con esta notaci\'f3n la clase va ser tratada como servicio web.\par
+\b\f2 @RequestMapping(\b0 "/api/cliente"\b ):\b0\f0 Vamos a recibir peticiones a trav\'e9s de esta direcci\'f3n para que pueda ser consumido este servicio Web.\par
+
+\pard\li142\sa200\sl276\slmult1\par
+
+\pard\li142\sl240\slmult1\cf2\ul\b\i DOCUMENTAR LOS SERVICIOS REST CON SWAGGER:\par
+
+\pard\li284\sl240\slmult1\cf3\i0 Implementacion:\cf0\b0\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-142\li426\sl240\slmult1\ulnone Agregar las librerias en el pom.xml.\par
+{\pntext\f4\'B7\tab}Crear una clase de configuraci\'f3n de Swagger en "com.bluecode.tienda.util" para confingurar el tema de Swagger en nuestra App.\par
+
+\pard\li284\sl240\slmult1\cf4\ul\b Anotaciones para Clase:\cf0\par
+
+\pard\li426\sl240\slmult1\ulnone @Configuration\par
+@EnableSwagger2\b0\par
+\b\f2 @Api(tags="cliente"):\b0\f0 Anotaci\'f3n que sirve para que el servicio web soporte la tecnologia de Swagger para lo documentaci\'f3n, diciendo que el servicio web se llame cliente a trav\'e9s de la documentaci\'f3n de swagger.\par
+
+\pard\li284\sl240\slmult1\cf4\ul\b Anotaciones para M\'e9todos:\par
+
+\pard\li426\sl240\slmult1\cf0\ulnone\f2 @ApiOperation(value\b0 ="Crear Cliente", \b notes\b0 ="Servicio para crear un nuevo cliente!!"\b )\par
+@ApiResponses(value =\{@ApiResponse(code\b0 =201\b , message= \b0 "Cliente creado Correctamente!!"\b ), @ApiResponse(code\b0 =400\b , message\b0 ="Solicitud Invalida!!"\b )\})\par
+\b0\f0\par
+
+\pard\li142\sl240\slmult1\cf2\ul\b CAPA DE SEGURIDAD:\par
+
+\pard\li284\sl240\slmult1\cf3 TECNOLOGIAS\b0 :\ulnone  \cf0\b Spring Security.\par
+\cf3\ul Implementaci\'f3n:\cf0\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-142\li426\sl240\slmult1\tx426\ulnone\b0 Agregar la libreria en  el \b pom.xml\b0\par
+{\pntext\f4\'B7\tab}Excluir la clase  por defecto\b (SecurityAutoconfiguration)\b0  en la clase principal\par
+{\pntext\f4\'B7\tab}Crear una clase \b BasicConfiguration.java  \b0 en "\b com.bluecode.ereservation.util\b0 " para configurar la seguridad de nuestra App.\par
+{\pntext\f4\'B7\tab}En \b Application.yaml \b0 configuramos el \b usuario y password\b0 .\par
+
+\pard\li284\sl240\slmult1\par
+\ul\b Anotaciones para Clase:\ulnone\b0\par
+
+\pard\li426\sl240\slmult1\b\f2 @Configuration\par
+@EnableWebSecurity\par
+
+\pard\sl240\slmult1\cf2\ul\f0\par
+
+\pard\li284\sl240\slmult1\cf0\ulnone\'bfComo Manejar La Seguridad En Nuestra App?\ul\par
+\ulnone Filtros De Autenticacion:\b0  No te deja escribir urls mientras no te hallas logeado.\par
+\b Control De Paginas De Error:\b0  Controla las paginas que no existen en la aplicaci\'f3n.(Validar el codigo de estado 404), se configura en el archivo web.xml.\par
+\b Envio De Peticiones Seguras: \b0 Cuando enviamos parametros a trav\'e9s de la URL con get o post, hay muchas paginas que implementan mecanismos de encriptamiento para sus datos que pasan como parametros.\par
+Para ello utilizamos librerias y tomar en cuenta el estandar \b OWASP\b0 :\par
+Donde se define la forma de programar.\par
+Ataques de una aplicacic\'f3n Web.\par
+OWASP se enfoca m\'e1s a Java y Net Proyect.\par
+\ul\b\i Spring Security:\ulnone\b0\i0\par
+Es un framework o modulo de Spring que permite gestionar completamente la seguridad de nuestras aplicaciones Java. Permite:\par
+\b Gestionar la Seguridad en varios niveles.\b0\par
+\b Configuraci\'f3n de seguridad portable\b0 : Toda la seguridad que configuremos se va en el artefacto final ya sea el war o jar.\par
+\b Soporta muchos modelos de autenticaci\'f3n:\b0  (HTTP Basic, LDAP, OAuth).\par
+
+\pard\sl240\slmult1\par
+\cf2\ul\b\fs24 DEPLOYAR LA APP:\par
+
+\pard\li426\sl240\slmult1\cf3\fs22 TECNOLOGIAS:\cf0\ulnone\b0  \b Docker o Heroku.\cf2\ul\fs24\par
+
+\pard\li142\sl240\slmult1\cf0\fs22 Configuraci\'f3n:\cf2\par
+
+\pard\li284\sl240\slmult1\cf0\ulnone\b0 Configuramos nuestro maven-docker-plugin lo cual va permitir construir una imagen desde nuestro pom.xml.\par
+Generamos una nueva estructura de ejecuci\'f3n para que cree la imagen muy aparte del empaquetado:\par
+La tarea anterior era del spring boot para generar el empaquetado:\par
+
+\pard\li142\sl240\slmult1\ul\b Crear una imagen docker de la App:\par
+
+\pard\li284\sl240\slmult1\ulnone\b0 Cuando queremos dockerizar la App ya no podemos de arrancar de localhost.\par
+Los perfiles se configuran de acuerdo al ambiente.\ul\b\par
+\ulnone\b0 Hay perfiles: Desarrollo, Construcci\'f3n,  Test, Producci\'f3n. \par
+Creamos un perfil de producci\'f3n: application-prod.yaml\par
+\tab Cambiamos localhost ---\lang1033 > postgres\lang10250 _server\par
+Crear una tarea de ejecuci\'f3n en nuestro proyecto:\par
+\lang10 Run As\lang10250 ---\lang1033 > Maven Build>\par
+Name: e\lang10250 -reservation_image\par
+Goals: clean install docker:build\par
+\b Objetivo: \b0 Crear la imagen de nuestra app y visualizarlo en el CLI de Docker.\lang10\par
+
+\pard\li142\sl240\slmult1\ul\b Subir la app al Docker Hub:\ulnone\b0\par
+
+\pard\li284\sl240\slmult1 Tener cuenta en Docker Hub.\par
+En Github: Subimos codigo.\par
+En Docker Hub: Subimos imagenes en el cual vamos a ir versionandolas.\par
+Al subir imagenes vemos que estan estructuradas en capas.\par
+\par
+\b docker login:\b0  Nos autenticamos con el Docker ID y password.\par
+\b docker logout\b0 : Para deslogearse.\par
+\b docker push jhordan01/e-reservation:\b0  Subir la imagen a  Docker Hub.\par
+\par
+\b Objetivo:\b0  Es subir la App a Docker Hub.\ul\b\par
+
+\pard\li142\sa200\sl276\slmult1 Ejucatar la app Dockerizada:\par
+\ulnone\b0 Gracias a docker cuando mandamos a producci\'f3n un App, nos independizamos del IDE y de la PC, podemos correr nuestra App en cualquier maquina.\par
+
+\pard\li284\sa200\sl276\slmult1\b docker run -d --name ereservation --add-host=postgres_server:IP -p 8080:8080 jhordan01/e-reservation\b0 : Creamos el container de nuestra App.\par
+\b docker logs -f ereservation: \b0 Verificamos el Log de nuestra App, como se esta ejecutando.\par
+
+\pard\li142\sa200\sl276\slmult1\b Objetivo:\b0  Crear un container a apartir de la image de nuestra App y al final ejecutar sin estar atados al IDE o la maquina.\ul\b\par
+\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\li142\sa200\sl276\slmult1\par
+
+\pard\li142\sl240\slmult1\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1\par
+\ul\b\par
+
+\pard\li142\sa200\sl276\slmult1\cf2\ulnone\b0\par
+\ul\b\par
+
+\pard\li142\sl240\slmult1\cf0\ulnone\b0 .\par
+
+\pard\li142\sa200\sl276\slmult1\cf2\ul\b\par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\i\par
+\par
+Ventas de trabajar con JPA y Hibernate:\par
+
+\pard\li142\sl240\slmult1\fs24 QUE ES UNA API:\fs22\par
+
+\pard\li284\sl240\slmult1\cf0\ulnone\b0\i0 Significa Interface de Programaci\'f3n de aplicaciones.\par
+Es una interfaz por medio del cual 2 aplicaciones se comunican.\par
+El formato de intercambio de datos normalmente es XML o JSON.\par
+\ul\b\i\'bfPara que necesitamos una API?\par
+\ulnone\b0\i0 Para \b\i ofrecer \b0 datos\i0  a aplicaciones moviles que se ejecutan en un movil.\par
+Para \b\i ofrecer\b0  datos \i0 a los developer en un formato estandar.\par
+Para \b\i ofrecer \b0 datos \i0 a nuestra propia web o aplicacion movil.\par
+Para \b\i consumir\b0  datos\i0  de otras aplicaciones o sitios web.\par
+\ul\b\i Provedores de APIs:\par
+\ulnone Twitter\b0\i0 : Acceso a datos de usuario, estados.\par
+\b\i Google\b0\i0 : Por ejemplo consumir un mapa de Google, etc.\cf2\ul\b\i\par
+
+\pard\li142\sl240\slmult1\par
+\i0\fs24 SERVICIOS WEB:\cf0\fs22\par
+
+\pard\li284\sl240\slmult1 Concepto 1\ulnone :\b0  Son aplicaciones construidas para poder intercambiar informaci\'f3n con otras aplicaciones.\par
+\ul\b Concepto 2\ulnone : \b0 Es una tecnologia que nos permite  utilizar funcionalidad de un programa en otro programa sin importar el LP o DB.\par
+\ul\b Concepto 3\ulnone : \b0 No es mas que una aplicaci\'f3n web que se crea para ser consumida  por otra aplicaci\'f3n, ubicada en otro servidor web y muchas veces implementada en otro lenguaje de programaci\'f3n.\par
+\par
+\cf2\ul\b FORMAS PARA CONSTRUIR SERVICIOS WEB:\cf0\ulnone\b0\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-142\li426\sl240\slmult1 Con la \b Arquitecutra SOAP\b0 : Usamos XML como formato de intercambio de info de un programa a otro.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\li284\sl240\slmult1 Con la \b Arquitectura REST\b0 : Usamos JSON(Archivo plano) formato de intercambio de info de un programa a otro.\ul\b\par
+
+\pard\li284\sl240\slmult1\cf2 2 CASOS T\'cdPICOS:\cf0\ulnone\b0\par
+
+\pard\li426\sl240\slmult1\ul\b CONSUMIR\ulnone : \b0 Para consumir un web service lo que hago es armo un \b XML\b0 (Soap) o \b JSON\b0 (Rest) con los parametros de entrada y se lo envio al web service, luego el web service me envia el XML o JSON con la respuesta.\par
+\ul\b EXPONER:\ulnone\b0  Expongo  el Web Service para ser consumido por una aplicaci\'f3n remota.\par
+
+\pard\li284\sl240\slmult1\cf1\ul\b NOTAS:\cf0\ulnone\b0\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-142\li426\sl240\slmult1 Un servicio web se disponibiliza por medio de una URL, para que pueda ser consumida por otras aplicaciones.\par
+{\pntext\f4\'B7\tab}Siempre que se consumen servicios generan codigos de respuestas.\par
+{\pntext\f4\'B7\tab}Resulta que la mayoria de lenguajes en web poseen librerias  para trabajar con web service, por lo que al final todo se reduce en saber como utilizar estas librerias.\par
+{\pntext\f4\'B7\tab}Podemos tener una aplicaci\'f3n, que este formada por 5 componentes de diferentes LPs y diferentes DBs, simplemente la idea es integrar estas funcionalidades para cuando se le presente al usuario final se le presente de una forma integral.\par
+{\pntext\f4\'B7\tab}Las aplicaciones necesitan comunicarse y consumir o exponer servicios con otras aplicaciones.\par
+
+\pard\sl240\slmult1\par
+
+\pard\li142\sl240\slmult1\ul\b\par
+
+\pard\sl240\slmult1\cf2\fs24\'bfQUE ES GRAPH QL?\i\fs22\par
+
+\pard\li142\sl240\slmult1\cf0\ulnone\b0\i0 Es un esquema que facilita la creaci\'f3n de consultas a las BD, desarrollado por Facebook y no esta ligada a una base de datos especifica.\par
+Es un lenguaje de consultas para API, se ejecuta del lado del servidor.\par
+
+\pard\sl240\slmult1\cf2\ul\b\fs24\'bfQUE ES REST FULL?\i\fs22\par
+
+\pard\li142\sl240\slmult1\cf0\ulnone\b0\i0 Son los servicios Web creados utilizando la arquitectura Rest.\cf2\ul\b\i\fs24\par
+
+\pard\sl240\slmult1 QUE ES API REST:\cf0\fs22\par
+
+\pard\li142\sl240\slmult1\ulnone REST\b0\i0 (\i Representational State Transfer\i0 ) Es un tipo de arquitectura de desarrollo Web que se apoya totalmente en el estandar HTTP.\par
+\b\i REST \b0\i0 tambien es un estilo de arquitectura de desarrollo web que se ejecuta sobre HTTP.\par
+\b REST \b0 tambien se considera como el framework para construir aplicaciones web que respeten HTTP.\ul\b\i  \ulnone\b0\i0\par
+\ul\b\i SIRVE:\ulnone\b0\i0  \b REST \b0 nos permite \i crear servicios y aplicaciones \i0 que pueden ser usadas por cualquier dispositivo o cliente que entienda HTTP.\par
+\par
+
+\pard\sa200\sl276\slmult1\cf2\ul\b\fs24 NIVELES DE CALIDAD AL APLICAR REST:\cf0\i\fs22\par
+
+\pard\li142\sl240\slmult1\cf2\i0 NIVEL 1: USO CORRECTO DE URLS:\cf0\i\par
+
+\pard\li284\sl240\slmult1\ulnone\b0\i0 Las URLs nos permiten acceder a cada una de las paginas, secciones o documentos del sitio web. Cada pagina, seccion o documento en el ambito de REST \i se le denomina \b recurso\b0\i0 .\par
+Por lo tanto el recurso es la informaci\'f3n a la que queremos consultar, acceder, leer, borrar, modificar, etc.\par
+\ul\b\i ESTRUCTURA:\par
+\cf2\ulnone\b0\{\cf0\b protocolo\cf2\b0\}\cf5\b ://\cf2\b0\{\cf0\b dominio o hostname\cf2\b0\}[\cf0 :\b puerto (opcional)\cf2\b0 ]\cf5\b /\cf2\b0\{\cf0\b ruta del recurso\cf2\b0\}\cf5\b ?\cf2\b0\{\cf0\b consulta de filtrado\cf2\b0\}\cf0\i0\par
+
+\pard\li142\sl240\slmult1\cf2\ul\b NIVEL 2: USO CORRECTO DE HTTP:\cf0\ulnone\b0\par
+
+\pard\li284\sl240\slmult1 Conocer HTTP(\i Protocolo de transferencia de Hipertexto\i0 ) es obligatorio para un desarrollador Web, para desarrollar APIs REST los aspectos claves que hay que dominar y tener claros son:\par
+\ul\b\i METODOS HTTP:\ulnone\b0  \i0\par
+A la hora de crear URLs no debemos poner verbos que impliquen acci\'f3n, aunque  queramos manipular recursos.Es por eso que HTTP nos dota de m\'e9todos para manipular recursos los cuales son:\par
+\ul\b\i Get\b0\i0 :\ulnone  \i Para consultar y leer recursos(Obtener).\b\par
+\ul Post:\ulnone  \b0 Para crear recursos.\b\par
+\ul Put:\ulnone  \b0 Para editar recursos.\b\par
+\ul Delete:\ulnone\b0\i0  \i Para eliminar Recursos.\i0\par
+\ul\b\i Patch:\ulnone\b0\i0  \i Para editar partes concretas o especificas de un recurso.\i0\par
+\ul\b\i CODIGOS DE ESTADO:\ulnone\b0\i0  Los codigos de estado mas conocidos son:\par
+\cf2\ul\b\i\fs24 1xx\fs22 :\ulnone\b0\i0  \b Respuestas informativas:\b0\par
+\ul\b\i\fs24 2xx:\ulnone\b0\i0  \b\fs22 Peticiones correctas:\cf0\ul\i\par
+\ulnone\i0 Status code 200:\b0  Petici\'f3n correcta \b\i OK\b0\i0 .\ul\b\i\par
+\ulnone\i0 Status code 201:\b0  Peticion correcta y se creo el recurso \b\i CREATED\b0\i0 .\ul\b\i\par
+\ulnone\i0 Status code 202:\ul\i\par
+\cf2\fs24 3xx\fs22 :\ulnone  \i0 Redirecciones:\b0\par
+\ul\b\i\fs24 4xx\fs22 :\ulnone\b0\i0  \b\i Errores del cliente:\cf0\ul\par
+\ulnone\i0 Status code 400: \b0 La Petici\'f3n contiene sintaxis erronea y no deberia repetirse \b\i Bad Request\b0\i0 .\par
+\b Status code 404:\b0  Recurso no encontrado, El servidor web no encontro la pagina o recurso solicitado \b\i Not Found\b0\i0 .\ul\b\i\par
+\cf2 5xx:\ulnone\b0\i0  \b Errores de servidor:\par
+\par
+\cf0\b0\par
+
+\pard\li284\sa200\sl276\slmult1\ul\b\i\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0\i0\par
+}
+ 
